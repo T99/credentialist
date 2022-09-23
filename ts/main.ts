@@ -1,6 +1,6 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 10:53 PM -- June 11th, 2019.
+ * 3:40 PM -- September 23rd, 2022.
  * Project: credentialist
  * 
  * credentialist - The last time I write a 'fetch credentials from a file'
@@ -25,8 +25,8 @@
  * NPM main class used for exporting this package's contents.
  *
  * @author Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/)
- * @version v<version>
- * @since v<version>
+ * @version v0.1.0
+ * @since v0.1.0
  */
 
 // export { ClassName } from "./class-location";

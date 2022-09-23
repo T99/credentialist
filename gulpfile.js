@@ -1,6 +1,6 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
- * 8:48 PM -- June 16th, 2019.
+ * 3:40 PM -- September 23rd, 2022.
  * Project: credentialist
  * 
  * credentialist - The last time I write a 'fetch credentials from a file'
