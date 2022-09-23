@@ -1,10 +1,34 @@
-# TypeScript Module Template
-This repository serves as an easy-start template for TypeScript NPM packages. 
+# `credentialist`
 
-Simply clone the repository into a directory:
+The last time I write a 'fetch credentials from a file' thingy.
 
-```bash
-$ git clone git@github.com:T99/ts-module-template.git my-new-project
+### [Find credentialist on NPM.](https://www.npmjs.com/package/credentialist)
+
+## Table of Contents
+
+ - [Installation](#installation)
+ - [Basic Usage](#basic-usage)
+ - [Documentation](#documentation)
+ - [License](#license)
+
+## Installation
+
+Install from NPM with
+
+```
+$ npm install --save credentialist
 ```
 
-And that's it! Your project is ready to go.
+## Basic Usage
+
+Basic usage instructions here.
+
+## Documentation
+
+See the [wiki](https://github.com/T99/credentialist/wiki) for full documentation.
+
+## License
+
+credentialist is made available under the GNU General Public License v3.
+
+Copyright (C) 2022 Trevor Sears

@@ -1,10 +1,11 @@
 /*
  * Created by Trevor Sears <trevor@trevorsears.com> (https://trevorsears.com/).
  * 10:53 PM -- June 11th, 2019.
- * Project: <name>
+ * Project: credentialist
  * 
- * <name> - <desc>
- * Copyright (C) 2021 Trevor Sears
+ * credentialist - The last time I write a 'fetch credentials from a file'
+ *     thingy.
+ * Copyright (C) 2022 Trevor Sears
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
