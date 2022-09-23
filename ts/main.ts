@@ -29,4 +29,77 @@
  * @since v0.1.0
  */
 
-// export { ClassName } from "./class-location";
+export type JSONPrimitive = string | number | boolean | null;
+export type JSONMap = { [key: string]: JSONValue };
+export type JSONArray = Array<JSONValue>;
+export type JSONValue = JSONPrimitive | JSONMap | JSONArray;
+
+// export type TypePrimitive = "string" | "number" | "boolean" | "null";
+// export type TypeMap = { [key: string]: TypeValue };
+// export type TypeArray = Array<TypeValue>;
+// export type TypeValue = TypePrimitive | TypeMap | TypeArray;
+
+export type JSONPrimitiveType<T extends JSONPrimitive> =
+	T extends string ?
+		"string" :
+		T extends number ?
+			"number" :
+			T extends boolean ?
+				"boolean" :
+				T extends null ?
+					"null" :
+					never;
+	
+export type JSONMapType<T extends JSONMap> =
+	{ [JSONMapKey in keyof T]: JSONValueType<T[JSONMapKey]> };
+
+
+export type JSONArrayType<T extends JSONArray> =
+// @ts-ignore I don't honestly know why the next line throw a type error, as
+// I've tested the type system and it all appears to work...
+	T extends Array<infer U> ? Array<JSONValueType<U>> : never; 
+
+export type JSONValueType<T extends JSONValue> =
+	T extends JSONPrimitive ?
+		JSONPrimitiveType<T> :
+		T extends JSONMap ?
+			JSONMapType<T> :
+			T extends JSONArray ?
+				JSONArrayType<T> :
+				never;
+
+export class Credentialist<T extends JSONValue> {
+	
+	public expectedType: JSONValueType<T>;
+	
+	public constructor(expectedType: JSONValueType<T>) {
+		
+		this.expectedType = expectedType;
+		
+	}
+	
+}
+
+type MyCredentialFile = {
+	host: string,
+	connectionLimit: number,
+	shouldConnect: boolean,
+	db: {
+		host: string,
+		user: string,
+	},
+	options: boolean[],
+};
+
+let cred: Credentialist<MyCredentialFile> = new Credentialist({
+	host: "string",
+	connectionLimit: "number",
+	shouldConnect: "boolean",
+	db: {
+		host: "string",
+		user: "string",
+	},
+	options: ["boolean"],
+});
+
+console.log(cred);
